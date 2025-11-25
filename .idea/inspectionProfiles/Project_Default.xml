@@ -1,0 +1,8 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="GrSwitchExhaustivenessCheck" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="KubernetesDuplicatedEnvVars" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="PyTestUnpassedFixtureInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  </profile>
+</component>
