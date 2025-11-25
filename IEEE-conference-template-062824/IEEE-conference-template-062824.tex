@@ -58,40 +58,21 @@ component, formatting, style, styling, insert.
 \end{IEEEkeywords}
 
 \section{Introduction}
-Stress \cite{yaribeygi2017impact} is any intrinsic or extrinsic stimulus that evokes a biological response, and it can be a triggering or aggravating factor for many pathological
- conditions [THE IMPACT OF STRESS ON BODY FUNCTION: A REVIEW]. This response is broadly categorized as acute stress, which results from the demands and
-  pressures of the recent past or near future, or chronic stress, which is caused by long-standing pressures [A Survey of Affective Computing for 
-  Stress Detection]. If a stressor is overwhelming and cannot be resolved, it becomes chronic, leaving neuroendocrine parameters altered and 
-  compromising the immune system [The effects of chronic stress on health: new insights into the molecular mechanisms of brain–body communication].
-   This chronic state is linked to a wide range of serious illnesses, including cardiovascular dysfunctions, diabetes, cancer, and mental illnesses
-    like depression [The effects of chronic stress on health: new insights into the molecular mechanisms of brain–body communication]. Furthermore, 
-    chronic stress can lead to macroscopic structural changes in the brain, such as atrophy, which in turn can cause significant disorders related to 
-    cognition and memory [THE IMPACT OF STRESS ON BODY FUNCTION: A REVIEW].To objectively identify stress, research has moved beyond subjective
-     questionnaires to focus on measurable physiological signals ****. The most common methods capture the body's autonomic response, primarily by 
-     analyzing Heart Rate Variability (HRV) from Electrocardiography (ECG) signals ****. Other validated approaches include measuring Galvanic Skin 
-     Response (GSR), which tracks changes in sweat gland activity ****, and using infrared thermography to detect the rapid drop in skin temperature 
-     caused by peripheral vasoconstriction ****. While these peripheral signals are effective, another line of inquiry targets the source of the stress
-      response itself: the electrical activity of the brain.This makes Electroencephalogram (EEG) signals a prime candidate, as they offer a 
-      non-invasive method to directly observe the brain's electrical activity and explore the intricacies of neural activity in response to stimuli.
-       EEG is particularly valuable as it allows for the estimation of a person's stress in real-time due to its high temporal resolution. In fact, 
-       numerous studies utilizing traditional machine learning (ML) frameworks have already demonstrated significant success in this area. Classic 
-       algorithms, particularly the Support Vector Machine (SVM), have proven to be highly effective, with multiple studies achieving impressive 
-       classification accuracies well over 90\% in detecting stress from EEG signals.While traditional ML has shown promise, it is often limited by a 
-       dependency on manual, time-consuming feature extraction [Deep Learning Approaches for Stress Detection: A Survey; A review on evaluating mental 
-       stress by deep learning using EEG signals]. This process requires expert knowledge and may not generalize well across different domains [Deep 
-       Learning Approaches for Stress Detection: A Survey]. Deep Learning (DL) architectures have emerged as a powerful alternative, as their key 
-       advantage is the ability to automatically learn representative and hierarchical features directly from high-dimensional, heterogeneous data 
-       [Deep Learning Approaches for Stress Detection: A Survey; Deep learning for electroencephalogram (EEG) classification tasks: a review]. This 
-       end-to-end learning capability is particularly well-suited for the complex, non-stationary, and low signal-to-noise ratio nature of EEG 
-       signals, eliminating the need for hand-crafted feature selection [A novel technique for stress detection from EEG signal using hybrid deep 
-       learning model; EEG classification of driver mental states by deep learning; A review on evaluating mental stress by deep learning using EEG 
-       signals]. Within this domain, specific DL models have shown exceptional promise: Convolutional Neural Networks (CNNs) excel at extracting 
-       relevant spatial features [A review on evaluating mental stress by deep learning using EEG signals; Deep learning for electroencephalogram 
-       (EEG) classification tasks: a review], while Long Short-Term Memory (LSTM) networks are adept at capturing the crucial temporal dependencies 
-       in sequential data [A review on evaluating mental stress by deep learning using EEG signals; A novel technique for stress detection from EEG 
-       signal using hybrid deep learning model]. Furthermore, hybrid models combining CNNs and LSTMs are increasingly achieving high classification 
-       accuracies by leveraging the strengths of both architectures [A novel technique for stress detection from EEG signal using hybrid deep learning 
-       model; A review on evaluating mental stress by deep learning using EEG signals].
+Stress, a biological response to internal or external stimuli, plays a critical role in exacerbating numerous pathological conditions\cite{yaribeygi2017impact}. 
+It is generally classified as acute (short-term) or chronic (long-term), with unresolved chronic stress leading to serious health consequences 
+by impairing the immune system and disrupting neuroendocrine functions. This persistent state is associated with a broad spectrum of illnesses, 
+including cardiovascular disorders, diabetes, mental health conditions such as depression, and structural brain changes that negatively affect 
+cognition and memory\cite{mariotti2015effects}. Recognizing the profound impact of stress, research has shifted toward identifying objective physiological markers 
+beyond subjective assessments. Common approaches monitor autonomic nervous system responses through peripheral signals like Heart Rate Variability 
+(HRV) from Electrocardiography (ECG), Galvanic Skin Response (GSR), and skin temperature\cite{kyrou2024deep}\cite{vanitha2013hybrid}\cite{herborn2015skin}. However, attention has increasingly turned to the brain’s 
+electrical activity as the origin of the stress response, positioning Electroencephalogram (EEG) signals as a valuable, non-invasive, real-time tool 
+for assessing neural dynamics. Traditional machine learning (ML) methods, especially Support Vector Machines (SVMs), have shown promise in 
+classifying stress states from EEG data. Yet, these methods often depend heavily on manual, time-intensive feature extraction. In contrast, deep 
+learning (DL) architectures offer a robust alternative by automatically learning meaningful features from complex, high-dimensional EEG signals. 
+Models such as Convolutional Neural Networks (CNNs) excel at capturing spatial patterns, while Long Short-Term Memory (LSTM) networks effectively 
+model temporal dependencies. Hybrid CNN-LSTM models are increasingly demonstrating superior classification accuracy by integrating both spatial and 
+temporal information. This survey aims to deliver a thorough review of EEG-based stress detection using advanced deep learning techniques, analyzing 
+current methodologies and performance trends, identifying key challenges, and exploring promising directions for future research.
 
 \section{BACKGROUND}
 
