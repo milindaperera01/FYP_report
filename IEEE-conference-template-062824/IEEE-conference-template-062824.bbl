@@ -7,7 +7,8 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -21,6 +22,18 @@
 \BIBdecl
 
 \bibitem{yaribeygi2017impact}
-H.~Yaribeygi, Y.~Panahi, H.~Sahraei, T.~P. Johnston, and A.~Sahebkar, ``The impact of stress on body function: A review,'' \emph{EXCLI journal}, vol.~16, p. 1057, 2017.
+H.~Yaribeygi, Y.~Panahi, H.~Sahraei, T.~P. Johnston, and A.~Sahebkar, ``The
+  impact of stress on body function: A review,'' \emph{EXCLI journal}, vol.~16,
+  p. 1057, 2017.
+
+\bibitem{kyrou2024deep}
+M.~Kyrou, I.~Kompatsiaris, and P.~C. Petrantonakis, ``Deep learning approaches
+  for stress detection: A survey,'' \emph{IEEE Transactions on Affective
+  Computing}, vol.~16, no.~2, pp. 499--517, 2024.
+
+\bibitem{hafeez2024eeg}
+M.~A. Hafeez and S.~Shakil, ``Eeg-based stress identification and
+  classification using deep learning,'' \emph{Multimedia Tools and
+  Applications}, vol.~83, no.~14, pp. 42\,703--42\,719, 2024.
 
 \end{thebibliography}
