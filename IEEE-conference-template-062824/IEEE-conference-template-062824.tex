@@ -24,14 +24,14 @@
 Sri Lanka\\
 milindaperera14996@mail.com}
 \and
-\IEEEauthorblockN{ Moda malisha
+\IEEEauthorblockN{ malisha
 \\Student}
 \IEEEauthorblockA{\textit{Dept of Computer Engineering} \\
 \textit{University of Peredeniya}\\
 Sri Lanka\\
 milindaperera14996@mail.com}
 \and
-\IEEEauthorblockN{ Moda nadeeka
+\IEEEauthorblockN{ nadeeka
 \\Student}
 \IEEEauthorblockA{\textit{Dept of Computer Engineering} \\
 \textit{University of Peredeniya}\\
@@ -100,7 +100,7 @@ productivity, and more responsive medical care, making stress detection an essen
 
 
 \subsection{Deep Learning Architectures for EEG Analysis}
-maleesha ube kalla mekata dapan
+"----------------------"
 
 
 \subsection{An Introduction to Hyperbolic Geometry for Machine Learning}
@@ -180,74 +180,166 @@ Time-Frequency Domain Features: These capture how the frequency content of the s
 providing both time and frequency information (Nirabi et al., 2021)
 \item oShort-Time Fourier Transform (STFT): Calculates the frequency spectrum over short, overlapping time windows (Li et al., 2023).
 \end{itemize}
-\subsection{Figures and Tables}\label{FAT}
-\paragraph{Positioning Figures and Tables} Place figures and tables at the top and 
-bottom of columns. Avoid placing them in the middle of columns. Large 
-figures and tables may span across both columns. Figure captions should be 
-below the figures; table heads should appear above the tables. Insert 
-figures and tables after they are cited in the text. Use the abbreviation 
-``Fig.~\ref{fig}'', even at the beginning of a sentence.
 
-\begin{table}[htbp]
-\caption{Table Type Styles}
-\begin{center}
-\begin{tabular}{|c|c|c|c|}
+Complexity and Non-linear Features: These measure the irregularity and unpredictability of the signal.
+
+\begin{itemize}
+\item Approximate Entropy (ApEn): A measure of the signal's regularity (Das Chakladar et al., 2020).
+\item Shannon Entropy (SE): Quantifies the uncertainty or randomness in the signal (Islam et al., 2021).
+\end{itemize}
+The alternative, more modern philosophy is characteristic of many deep learning frameworks. In end-to-end learning, the raw or minimally
+processed EEG signals are fed directly into a deep neural network (e.g., a CNN or RNN). The network itself is then tasked with learning
+the most relevant and discriminative features automatically through its hierarchical layers (Li et al., 2023). This approach eliminates
+the need for manual feature engineering, potentially allowing the model to discover novel patterns that are not captured by predefined
+feature sets (Sundaresan et al., 2021). It is important to note that these two philosophies are not mutually exclusive; hybrid approaches
+are common, where sophisticated deep learning architectures are trained on sets of highly engineered features to leverage both domain
+knowledge and the model's capacity for learning complex relationships.
+
+\section{Literature Review: Methodologies in Stress and Emotion Detection from EEG}\label{FAT}
+
+This section surveys the evolution of classification techniques applied to EEG-based stress and emotion detection. The review begins 
+by examining the performance of conventional "shallow" machine learning classifiers, which served as the baseline for many years. It 
+then transitions to the now-dominant deep learning models that operate in standard Euclidean space, highlighting their architectural 
+diversity and improved performance. Finally, this review culminates with an analysis of the emerging and theoretically compelling research 
+on hyperbolic deep learning approaches, which are designed to better capture the intrinsic geometry of neural data
+
+\subsection{Conventional Machine Learning Baselines}
+Before the widespread adoption of deep learning, EEG-based classification tasks were primarily addressed using conventional machine learning 
+algorithms. These "shallow" models rely on hand-crafted features extracted from the EEG signals. Common classifiers in this category include 
+Support Vector Machines (SVM), k-Nearest Neighbors (k-NN), and Linear Discriminant Analysis (LDA). Several studies have demonstrated the 
+effectiveness of these methods. For instance, Nirabi et al. (2021) utilized features derived from the Discrete Wavelet Transform (DWT) and 
+achieved a binary stress classification accuracy of 91.0\% with an SVM classifier. In a study involving a virtual reality environment, 
+Kamińska et al. (2021) reported accuracies as high as 96.42\% for stress-versus-relaxation classification using both SVM and a Multilayer 
+Perceptron (MLP), demonstrating the high performance achievable with well-engineered features and conventional classifiers.
+
+\subsection{Euclidean Space Deep Learning Models}
+Deep learning models operating in Euclidean space represent the current state-of-the-art, offering the ability to learn features automatically 
+and often outperforming conventional methods.
+
+CNN-Based Models: Convolutional Neural Networks are widely used to learn spatial patterns from EEG data. This is typically achieved by transforming 
+the multi-channel EEG time-series into 2D images, for instance by arranging channels spatially or by using time-frequency representations like the 
+Continuous Wavelet Transform (CWT) (Zeng et al., 2018). Fu et al. (2022) proposed a Symmetric Convolutional and Adversarial Neural Network (SDCAN) 
+model that achieved an accuracy of 87.62\% for a challenging four-class stress classification task (before-stress, medium-stress, high-stress, 
+and recovery).
+
+RNN-Based Models: Recurrent Neural Networks, especially Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU) variants, are adept at modeling 
+the temporal dynamics inherent in EEG signals. Sundaresan et al. (2021) conducted a comparative study and found that a two-layer LSTM RNN was 
+highly effective for multi-class stress classification, achieving an impressive average accuracy of 93.27\%. Another study implementing a 
+GRU-based model for stress detection reported a test accuracy of 89\%, further validating the power of recurrent architectures for sequential 
+EEG data ([Deep Learning Based, 2024]).
+
+Hybrid Models: To capture both spatial and temporal dependencies simultaneously, many researchers have developed hybrid architectures that combine 
+CNN and LSTM components. These models, often referred to as C-RNNs, first use convolutional layers to extract spatial features from EEG "frames" 
+at each time step, and then feed the resulting sequence of feature vectors into an LSTM to model the temporal evolution of these features 
+(Li et al., 2023).
+
+\subsection{Hyperbolic Space Deep Learning Models}
+A nascent but highly promising area of research involves moving beyond Euclidean geometry and applying deep learning models in hyperbolic space. The core motivation is both theoretical and empirical.
+Theoretically, neuroscientists like Tozzi et al. (2018) have posited that the complex, non-linear dynamics of EEG signals can be effectively modeled on hyperbolic manifolds. This suggests that the 
+intrinsic geometry of brain activity may be better represented in a negatively curved space.
+Empirically, the first applications to EEG data have yielded strong results. Chang et al. (2025) developed a Multi-Scale Hyperbolic Contrastive 
+Learning (MSHCL) method for cross-subject EEG emotion recognition. Their model achieved a notable 89.3\% accuracy on the three-class task of the 
+public SEED dataset. Crucially, their ablation studies revealed that the performance gains from hyperbolic embeddings were most pronounced in 
+datasets where hierarchical relationships in the data were more evident, providing direct support for the theoretical motivation.
+While direct applications to stress detection are still emerging, the foundational tools for building such models already exist. 
+Ganea et al. (2018) pioneered the development of hyperbolic versions of RNNs and LSTMs, providing the building blocks for modeling 
+temporal data in hyperbolic space. More recently, Narayan and Patel (2024) defined hyperbolic classifier heads, including a hyperbolic 
+cross-entropy loss function, which enables the final classification step to operate within the geometric constraints of the Poincaré ball. 
+Together, these works demonstrate a clear path forward for developing end-to-end hyperbolic deep learning pipelines specifically designed 
+to capitalize on the unique geometric properties of EEG data.
+
+\section{Comparative Analysis and Discussion}
+
+The literature review reveals a clear progression in the methodologies used for EEG-based stress and emotion detection, 
+from feature-dependent shallow classifiers to powerful end-to-end deep learning frameworks. This section provides a direct 
+comparison of these approaches, summarizing their architectural designs and reported performance. This synthesis culminates 
+in a focused analysis of the unique advantages and differentiating factors that hyperbolic models bring to this domain.
+
+\subsection{Performance and Architectural Comparison}
+The following table summarizes representative studies from the literature, categorized by their underlying methodology. 
+It highlights the diversity in model architectures, feature engineering techniques, and the performance levels achieved 
+across different datasets and classification tasks.
+
+\begin{table*}[ht]
+\centering
+\caption{Comparison of Conventional, Euclidean, and Hyperbolic Deep Learning Models for EEG-Based Stress Classification}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{2.5cm} p{3cm} p{2.5cm} p{4.2cm} p{2.5cm} p{3.2cm}}
 \hline
-\textbf{Table}&\multicolumn{3}{|c|}{\textbf{Table Column Head}} \\
-\cline{2-4} 
-\textbf{Head} & \textbf{\textit{Table column subhead}}& \textbf{\textit{Subhead}}& \textbf{\textit{Subhead}} \\
+\textbf{Reference(s)} & \textbf{Model / Architecture} & \textbf{Dataset(s) Used} & \textbf{Key Features / Preprocessing} & \textbf{Reported Accuracy / Performance} & \textbf{Key Contribution} \\
 \hline
-copy& More table copy$^{\mathrm{a}}$& &  \\
+
+\multicolumn{6}{l}{\textbf{Conventional ML}} \\
+
+Nirabi et al., 2021 &
+SVM, k-NN, LDA &
+Private &
+Discrete Wavelet Transform (DWT), ‘db4’ wavelet &
+SVM: 91.0\%; k-NN: 86.3\%; LDA: 90.0\% &
+High performance with conventional SVM on DWT features. \\
+
 \hline
-\multicolumn{4}{l}{$^{\mathrm{a}}$Sample of a Table footnote.}
+\multicolumn{6}{l}{\textbf{Euclidean Deep Learning}} \\
+
+Sundaresan et al., 2021 &
+2-Layer LSTM RNN &
+Private &
+Raw EEG (end-to-end learning) &
+93.27\% (4-class: Stressor, Baseline, Guided/Unguided Breathing) &
+Demonstrated high accuracy of LSTM for multi-class stress classification. \\
+
+Fu et al., 2022 &
+SDCAN (Symmetric Convolutional \& Adversarial NN) &
+Private (TSST-based) &
+Raw EEG (end-to-end learning) &
+87.62\% (4-class stress) &
+Novel adversarial framework for subject-invariant EEG feature extraction. \\
+
+Deep Learning Based, 2024 &
+GRU with Adam optimizer &
+Kaggle (DEAP subset) &
+FFT applied to raw EEG &
+89\% (Test accuracy for 3 classes) &
+Effectiveness of GRU architecture for EEG stress classification. \\
+
+Das Chakladar et al., 2020 &
+Hybrid BLSTM-LSTM &
+STEW Dataset &
+PSD, statistical, non-linear (ApEn) features with GWO selection &
+86.33\% (No task), 82.57\% (Multitasking) &
+Used Grey Wolf Optimizer (GWO) for feature selection with a deep learning model. \\
+
+\hline
+\multicolumn{6}{l}{\textbf{Hyperbolic Deep Learning}} \\
+
+Chang et al., 2025 &
+MSHCL (Multi-Scale Hyperbolic Contrastive Learning) &
+SEED, MPED, FACED &
+End-to-end contrastive learning &
+89.3\% (3-class on SEED) &
+First hyperbolic contrastive learning for EEG, highlighting benefits for hierarchical structure. \\
+
+Ganea et al., 2018 &
+Hyperbolic RNN/GRU &
+Textual Entailment, Noisy-Prefix Recognition &
+Hyperbolic sentence embeddings &
+97.14\% vs. 95.96\% (Euclidean GRU) &
+Foundational work introducing hyperbolic RNN/GRU architectures. \\
+
+\hline
 \end{tabular}
-\label{tab1}
-\end{center}
-\end{table}
+\end{table*}
 
-\begin{figure}[htbp]
-\centerline{\includegraphics{fig1.png}}
-\caption{Example of a figure caption.}
-\label{fig}
-\end{figure}
 
-Figure Labels: Use 8 point Times New Roman for Figure labels. Use words 
-rather than symbols or abbreviations when writing Figure axis labels to 
-avoid confusing the reader. As an example, write the quantity 
-``Magnetization'', or ``Magnetization, M'', not just ``M''. If including 
-units in the label, present them within parentheses. Do not label axes only 
-with units. In the example, write ``Magnetization (A/m)'' or ``Magnetization 
-\{A[m(1)]\}'', not just ``A/m''. Do not label axes with a ratio of 
-quantities and units. For example, write ``Temperature (K)'', not 
-``Temperature/K''.
+\subsection{Analysis of Hyperbolic Models' Differentiators}
+The comparative results suggest that while well-tuned Euclidean deep learning models, particularly LSTMs, can achieve very high accuracy, the emerging field of hyperbolic deep learning offers unique and compelling advantages rooted in its geometric properties. The core differentiators of these models for EEG analysis are:
+1.Superior Embedding of Hierarchies: The primary motivation for using hyperbolic geometry is its natural ability to represent hierarchical and tree-like data structures with very low distortion. Unlike Euclidean space, where the volume grows polynomially, the volume of hyperbolic space grows exponentially with the radius. This property mirrors the exponential growth of nodes in a tree, making it an ideal geometric substrate for embedding complex, branching data structures like those hypothesized to exist in brain connectivity patterns (Ganea et al., 2018; He et al., 2025). This property is theoretically ideal for modeling the complex, nested neural dynamics that contribute to inter-subject variability, a key challenge in creating generalizable EEG-based classifiers.
+2.Increased Model Capacity: The exponential expansion of hyperbolic space provides a larger representational capacity. This means that complex data and decision boundaries can be modeled more efficiently within the space. For example, recent work has shown that associative memory networks built in negatively curved spaces demonstrate an increased memory capacity compared to their classical counterparts, allowing them to store and retrieve a greater number of patterns (Aguilera et al., 2025). This enhanced capacity could be highly beneficial for complex multi-class stress classification tasks.
+3.Parameter Efficiency: By embedding data in a geometrically appropriate space, hyperbolic models have the potential to capture complex relationships more parsimoniously. They may be able to achieve comparable or better performance with fewer dimensions or fewer trainable parameters than equivalent Euclidean models, which might require much higher dimensions to "flatten out" the intrinsic curvature of the data (Liu et al., 2019). This efficiency could be crucial for deploying robust stress detection models on low-power, wearable EEG devices where computational resources are constrained.
+Despite these clear theoretical and emerging empirical advantages, the application of hyperbolic deep learning to neurophysiological data is still in its infancy and is not without its own set of challenges and open questions that warrant further investigation.
 
-\section*{Acknowledgment}
-
-The preferred spelling of the word ``acknowledgment'' in America is without 
-an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B. 
-G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor 
-acknowledgments in the unnumbered footnote on the first page.
-
-\section*{References}
-
-Please number citations consecutively within brackets \cite{b1}. The 
-sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference 
-number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at 
-the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
-
-Number footnotes separately in superscripts. Place the actual footnote at 
-the bottom of the column in which it was cited. Do not put footnotes in the 
-abstract or reference list. Use letters for table footnotes.
-
-Unless there are six authors or more give all authors' names; do not use 
-``et al.''. Papers that have not been published, even if they have been 
-submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers 
-that have been accepted for publication should be cited as ``in press'' \cite{b5}. 
-Capitalize only the first word in a paper title, except for proper nouns and 
-element symbols.
-
-For papers published in translation journals, please give the English 
-citation first, followed by the original foreign-language citation \cite{b6}.
+\section{Challenges and Future Directions}
+The application of deep learning to EEG-based stress detection has made significant strides, yet the field is still faced with persistent challenges. This section critically assesses the primary limitations that currently hinder progress and, based on these gaps, proposes promising avenues for future research. In particular, it highlights how the unique properties of hyperbolic models may offer novel solutions to some of these long-standing problems
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
