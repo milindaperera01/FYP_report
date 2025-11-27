@@ -100,28 +100,110 @@ productivity, and more responsive medical care, making stress detection an essen
 
 
 \subsection{Deep Learning Architectures for EEG Analysis}
-"----------------------"
+\subsubsection{Introduction to Deep Learning in Neuroinformatics}
+Deep learning (DL), a subfield of machine learning inspired by the hierarchical information-processing structure of the human brain, has emerged as a powerful paradigm for 
+complex pattern recognition tasks. Unlike traditional machine learning methods, DL algorithms automatically learn multi-level feature representations, progressively transforming 
+low-level inputs into more abstract and discriminative features \cite{li2020deep}. This capability has become especially valuable in the era of big data, where deep neural networks 
+demonstrate exceptional flexibility in modeling complex, high-dimensional datasets and consistently achieving state-of-the-art performance across various domains \cite{li2020deep, merlin2022deep}.
+
+In neuroinformatics, these strengths have led to the widespread adoption of DL techniques for Electroencephalogram (EEG) signal analysis \cite{gao2021complex, roy2023hybrid}. Their effectiveness is well-documented in 
+applications such as automated epileptic seizure detection, where deep networks have shown a remarkable ability to decode intricate neural patterns \cite{tjepkema2018deep, birjandtalab2017automated}. While earlier studies 
+on EEG-based stress detection predominantly employed traditional machine learning classifiers such as Support Vector Machines (SVM) and Naïve Bayes (NB) \cite{asif2019human}, these approaches often rely on handcrafted features
+and struggle to model the nonlinear and spatio-temporal complexity of EEG data. In contrast, deep learning’s capacity for end-to-end feature extraction and its ability to capture both spatial and temporal dependencies make 
+it a compelling choice for developing more robust and accurate stress detection systems.
+
+\subsubsection{Convolutional Neural Networks (CNNs)}
+Convolutional Neural Networks (CNNs) are a class of deep learning models particularly adept at processing data with a grid-like topology, such as images or time-series signals \cite{james2020deep}. Their fundamental 
+principle is \textit{automatic feature extraction}, which allows them to learn hierarchical representations directly from raw data, eliminating the need for manual feature engineering \cite{roy2023hybrid}.
+
+Inspired by the hierarchical processing of the visual cortex, CNNs use layers of learnable filters that scan the input to detect local patterns, ranging from simple edges to complex, abstract structures \cite{james2020deep}. 
+This ability to automatically discover relevant patterns from complex signals makes them exceptionally powerful for EEG analysis. For BCI applications such as stress detection, convolutional layers can implicitly learn the 
+spatio-temporal features in EEG signals that correspond to different mental states, often outperforming traditional approaches \cite{roy2023hybrid}. The architecture of a CNN—particularly the number of layers, filter sizes, and 
+pooling strategies—must be carefully tuned for optimal performance in a given EEG classification task \cite{herborn2015skin}.
+
+\subsubsection{Recurrent Neural Networks (RNNs) and Long Short-Term Memory Networks (LSTMs)}
+Recurrent Neural Networks (RNNs) are widely used for sequential data analysis, making them well-suited for modeling the temporal characteristics of EEG signals \cite{merlin2022deep, roy2023hybrid}. By maintaining internal 
+hidden states, RNNs capture short-term temporal dependencies across successive time points. However, conventional RNNs often suffer from the vanishing gradient problem, limiting their ability to learn long-range temporal patterns in extended EEG recordings.
+
+Long Short-Term Memory (LSTM) networks address this challenge through a gating mechanism that regulates the flow of information, enabling the model to retain or discard temporal features over long intervals \cite{roy2023hybrid}. 
+LSTMs have therefore demonstrated high effectiveness in EEG applications such as seizure prediction, mental workload estimation, and cognitive state recognition \cite{merlin2022deep}. Their ability to learn complex, long-term temporal
+dependencies makes them a foundational architecture in many modern EEG-based systems.
+
+\subsubsection{Gated Recurrent Units (GRU)}
+The Gated Recurrent Unit (GRU), introduced by Cho et al. (2014), is a streamlined recurrent neural architecture designed to model long-term temporal dependencies in sequential data \cite{chung2014empirical}. GRUs mitigate common optimization 
+issues in traditional RNNs—particularly vanishing and exploding gradients—using gating mechanisms that regulate information flow across time. Each GRU includes two gates: an \textit{update gate}, which determines how much of the past information 
+is preserved, and a \textit{reset gate}, which controls how much of the previous state influences the current input processing.
+
+This design enables GRUs to selectively retain useful temporal features while discarding less relevant information, enhancing gradient stability through an additive update process. Due to their efficiency and lower computational complexity relative to LSTMs, 
+GRUs are widely used for modeling temporal patterns in EEG signals, particularly in applications requiring continuous and dynamic interpretation of brain activity \cite{chung2014empirical}.
+
+\subsubsection{Curved Neural Networks}
+Curved Neural Networks represent a recent advancement in geometric deep learning, extending conventional neural architectures to operate on curved, non-Euclidean manifolds rather than standard flat vector spaces \cite{aguilera2025explosive}. The core motivation 
+for using curved spaces is that many real-world datasets—especially those containing hierarchical, relational, or tree-like structures—are more naturally embedded in geometries with constant curvature. For example, hyperbolic spaces, characterized by negative curvature 
+and exponentially expanding distances, enable low-distortion embeddings of hierarchical structures and allow models to represent complex relationships more compactly and expressively \cite{aguilera2025explosive}.
+
+Beyond hyperbolic geometry, the broader class of curved deep learning models incorporates higher-order interactions by deforming the statistical manifold on which learning occurs \cite{he2025hyperbolic}. Drawing from information geometry, these models employ deformed 
+exponential families—such as Rényi-based formulations—to capture complex dependencies that are difficult to express in Euclidean models. Such characteristics make curved neural networks a theoretically grounded framework for EEG analysis, as EEG signals inherently exhibit 
+nonlinear dynamics, hierarchical organization, and rich spatio-temporal relationships that benefit from non-Euclidean representations.
 
 
-\subsection{An Introduction to Hyperbolic Geometry for Machine Learning}
-The vast majority of deep learning models operate in Euclidean space, the familiar geometry of flat surfaces. However, certain data types, particularly those with an 
-underlying hierarchical or tree-like structure, can be embedded into Euclidean space only with significant distortion (Ganea et al., 2018). Hyperbolic geometry, a type 
-of non-Euclidean geometry characterized by constant negative curvature, provides a compelling alternative. In hyperbolic space, the volume grows 
-exponentially with the radius, mirroring the exponential growth of nodes in a tree. This property allows hierarchical structures to be embedded 
-with much lower distortion, preserving their metric properties more faithfully (He et al., 2025).
-A common and convenient model for implementing hyperbolic geometry is the Poincaré ball model. This model represents an n-dimensional hyperbolic 
-space as the interior of an n-dimensional unit ball, equipped with a specialized metric that causes distances to expand infinitely as they approach 
-the boundary (Peng et al., 2022). To perform computations and build neural networks within this space, standard vector operations must be replaced 
-with their hyperbolic equivalents, which are defined within the framework of Möbius gyrovector spaces. Key operations include:
-\begin{itemize}
-\item Möbius addition: A non-commutative and non-associative generalization of vector addition.
-\item Möbius scalar multiplication: A generalization of scalar-vector multiplication.
-\end{itemize}
-These principled generalizations, along with corresponding definitions for operations like matrix-vector multiplication, allow for the development of
-hyperbolic analogues of standard neural network layers (Ganea et al., 2018). By defining fully connected, recurrent, and other layers that operate 
-entirely within the Poincaré ball, we can build deep learning models that are geometrically tailored to the intrinsic structure of hierarchical data, 
-setting the stage for their application to complex EEG signals.
-counting.
+\section*{C. An Introduction to Hyperbolic Geometry for Machine Learning}
+
+The vast majority of deep learning models operate in Euclidean space ($\mathbb{R}^{n}$), the familiar 
+geometry of flat surfaces {IEEE-conference-template-062824}. However, certain data types, particularly those 
+with an underlying hierarchical or tree-like structure, can only be embedded into Euclidean space with 
+significant distortion {Hyperbolic Neural Networks}. This distortion occurs because the volume in Euclidean 
+space grows polynomially with the radius, whereas the number of nodes in a hierarchical structure often grows 
+exponentially {Multi-Scale Hyperbolic Contrastive Learning for Cross-Subject EEG Emotion Recognition}.
+
+Hyperbolic geometry, a type of non-Euclidean geometry characterized by constant negative curvature, 
+provides a compelling alternative {IEEE-conference-template-062824, Hyperbolic Deep Neural Networks: A Survey}. 
+In hyperbolic space, the volume and distance grow exponentially with the radius, mirroring the exponential growth of 
+nodes with tree depth {IEEE-conference-template-062824}. This property allows hierarchical structures to be 
+embedded with much lower distortion, preserving their metric properties more faithfully 
+{Multi-Scale Hyperbolic Contrastive Learning for Cross-Subject EEG Emotion Recognition, IEEE-conference-template-062824}.
+
+A common and convenient model for implementing hyperbolic geometry is the Poincaré ball model ($\mathbb{D}_{c}^{n}$) 
+{IEEE-conference-template-062824}. This model represents an $n$-dimensional hyperbolic space as the interior of an $n$-dimensional 
+open unit ball equipped with a specialized Riemannian metric $\mathfrak{g}_{x}^{\mathbb{D}}$ that causes distances to expand infinitely 
+as they approach the boundary {Hyperbolic Deep Neural Networks: A Survey, IEEE-conference-template-062824}:
+% 
+\begin{align*}
+    \mathbb{D}_{c}^{n}&=\left\{x\in\mathbb{R}^{n}:c\|x\|^2<1\right\} \\
+    \mathfrak{g}_{x}^{\mathbb{D}}&=\lambda_{x}^{2}\mathfrak{g}^{E}, \text{ where } \lambda_{x}:=\frac{2}{1-c\|x\|^2}
+\end{align*}
+Here, $\mathfrak{g}^{E}=I_{n}$ is the Euclidean metric tensor, and $c$ is the curvature parameter {Hyperbolic Neural 
+Networks, Multi-Scale Hyperbolic Contrastive Learning for Cross-Subject EEG Emotion Recognition}.
+
+To perform computations and build neural networks within this curved space, standard Euclidean vector operations must be replaced 
+with their hyperbolic equivalents, which are precisely defined within the framework of \textbf{Möbius gyrovector spaces} 
+{IEEE-conference-template-062824, Hyperbolic Neural Networks}.
+
+\subsection*{Key Hyperbolic Operations}
+
+The translation between the Euclidean tangent space  ($\mathcal{T}_{x}\mathbb{D}_{c}^{n}$) at point $x$ and the 
+manifold $\mathbb{D}_{c}^{n}$ is governed by the exponential map ($Exp_{x}^{c}$) and the logarithmic map ($Log_{x}^{c}$) 
+{Hyperbolic Deep Neural Networks: A Survey}. These maps are crucial for bridging the geometry and projecting gradient updates. 
+The Exponential Map, which projects a vector $v$ from the tangent space onto the manifold, is given by:
+% 
+$$Exp_{x}^{c}(v)=x\oplus_{c}\left(\tanh\left(\sqrt{c}\frac{\lambda_{x}^{c}\|v\|}{2}\right)\frac{v}{\sqrt{c}\|v\|}\right)$$
+
+The core arithmetic operations are similarly generalized:
+\begin{enumerate}
+    \item \textbf{Möbius Addition} ($x\oplus_{c}y$): A non-commutative and non-associative generalization of vector addition for 
+    vectors $x, y \in \mathbb{D}_{c}^{n}$ {IEEE-conference-template-062824, Hyperbolic Neural Networks}:
+    $$x\oplus_{c}y:=\frac{(1+2c\langle x,y\rangle+c\|y\|^2)x+(1-c\|x\|^2)y}{1+2c\langle x,y\rangle+c^2\|x\|^2\|y\|^2}$$
+
+    \item \textbf{Möbius Scalar Multiplication} ($r\otimes_{c}x$): A generalization of scalar-vector multiplication for a 
+    scalar $r \in \mathbb{R}$ and vector $x \in \mathbb{D}_{c}^{n} \setminus \{0\}$ {IEEE-conference-template-062824, Hyperbolic Neural Networks}:
+    $$r\otimes_{c}x:=(1/\sqrt{c})\tanh(r\tanh^{-1}(\sqrt{c}\|x\|))\frac{x}{\|x\|}$$
+\end{enumerate}
+
+These principled generalizations, along with corresponding derivations for operations like matrix-vector multiplication
+{Hyperbolic Neural Networks} and activation functions, allow for the development of hyperbolic analogues of standard neural network layers 
+{IEEE-conference-template-062824}. By defining fully connected, recurrent (e.g., hyperbolic RNNs and GRUs), and other layers that 
+operate entirely within the Poincaré ball, we can build deep learning models that are geometrically tailored to the intrinsic hierarchical 
+structure of data, setting the stage for their application to complex EEG signals {Hyperbolic Neural Networks}.
 
 \section{A General Pipeline for EEG-Based Stress Detection}
 Research in EEG-based stress detection typically follows a standardized, end-to-end process, beginning with data collection and 
@@ -194,6 +276,46 @@ the need for manual feature engineering, potentially allowing the model to disco
 feature sets (Sundaresan et al., 2021). It is important to note that these two philosophies are not mutually exclusive; hybrid approaches
 are common, where sophisticated deep learning architectures are trained on sets of highly engineered features to leverage both domain
 knowledge and the model's capacity for learning complex relationships.
+
+\section{Review method}
+This review followed the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA 2020) guidelines for planning and reporting 
+the literature search and study selection process. A PRISMA flow diagram was used to document the number of records identified, screened, assessed 
+for eligibility, and finally included 
+in the review.
+
+\subsection{Databases and time frame}
+The literature search targeted peer‑reviewed articles on EEG‑based stress detection using advanced neural architectures, including curved or geometry‑aware neural 
+networks. Major databases such as Google Scholar, IEEE Xplore, Elsevier, Web of Science, and ScienceDirect were searched for studies published between January 2015 
+and November 2025 to capture recent developments in deep and non‑Euclidean learning for EEG analysis.
+
+\subsection{Search strategy}
+The search strategy combined controlled vocabulary (where available) and search terms related to EEG, stress, and neural networks.An example generic search string 
+is (“electroencephalogram” OR “EEG”) AND (“stress” OR “mental stress”) AND (“deep learning” OR “neural network” OR “graph neural network” OR “curved neural network”)
+
+\subsection{Eligibility criteria}
+Inclusion and exclusion criteria were defined a priori to ensure consistent screening.
+
+Inclusion criteria:
+\begin{itemize}
+\item Studies using EEG signals to detect, classify, or quantify psychological or cognitive stress in humans
+\item Studies employing deep learning models, with a focus on architectures that non‑Euclidean, or curvature‑aware representations
+\item Original research articles with quantitative performance metrics (e.g., accuracy, F1‑score, sensitivity/specificity) reported on a clearly described dataset.
+\end{itemize}
+
+Exclusion criteria:
+
+\begin{itemize}
+\item Non‑EEG modalities only (e.g., ECG‑, GSR‑, or facial‑expression‑only stress detection)
+\item Reviews, editorials, theses, and conference abstracts without full text or sufficient methodological detail
+\item Studies focusing exclusively on non‑stress affective states (e.g., generic emotion recognition without explicit stress or workload labels)
+\end{itemize}
+
+\subsection{Study Selection  and Screening Process}
+A broad search initially retrieved many studies based on the chosen keywords. Articles specifically focused on EEG-based stress detection using both curved neural 
+networks and other deep learning methods were selected for detailed review. Duplicates and non-original studies were removed, and titles and abstracts were screened 
+for relevance. Full texts were then assessed, with further exclusions made for studies not meeting the review’s technical focus. This approach ensured only the most 
+relevant and methodologically sound articles were included.
+
 
 \section{Literature Review: Methodologies in Stress and Emotion Detection from EEG}\label{FAT}
 
