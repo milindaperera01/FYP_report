@@ -225,58 +225,50 @@ to stimuli designed to elicit specific emotional states, such as watching carefu
 
 
 \subsection{Signal Preprocessing and Artifact Removal}\label{AAA}
-Raw EEG data is invariably contaminated by noise and artifacts from both physiological and environmental sources. Therefore, a critical 
-preprocessing stage is required to clean the signals before any analysis can be performed. Key steps include:
+\subsection{Feature Extraction Methodologies}
+Once the EEG signals are preprocessed, the next step is to derive inputs suitable for a machine learning model. This process is largely governed by 
+one of two primary philosophies for feature handling, which are increasingly combined in hybrid approaches \cite{kyrou2024deep, gedam2021review}.
 
-Band-pass filtering: This is applied to isolate the frequency range of interest and remove unwanted noise. A common range used in emotion 
-recognition studies is 4-45 Hz, which effectively removes low-frequency physiological artifacts (e.g., from breathing or heartbeats) and 
-high-frequency environmental noise (e.g., 50/60 Hz power line interference) (Islam et al., 2021).
+The traditional philosophy involves manually calculating a predetermined set of features from the signal, often deeply rooted in domain 
+knowledge. These "hand-crafted" features are specifically engineered to capture distinct characteristics of the EEG signal across different domains 
+\cite{katmah2021review, gedam2021review}.
 
-Artifact Removal: Specific techniques are used to remove artifacts caused by muscle movements (electromyography, EMG) and eye blinks 
-(electrooculography, EOG). Independent Component Analysis (ICA) is a powerful method for separating these artifactual sources from the 
-underlying brain signals (Katmah et al., 2021). Artifact Subspace
+\begin{enumerate}
+    \item Frequency-Domain Features: These features describe the power distribution across different frequency bands:
+    \begin{itemize}
+        \item Power Spectral Density (PSD): The average power of the signal within a specific frequency band (e.g., Alpha, Beta) 
+        \cite{alshorman2022frontal, martinez2021detection, gedam2021review}.
+        \item Differential Entropy (DE): A feature related to the complexity of the signal within a frequency band, frequently employed in 
+        emotion recognition \cite{patel2023mental, phutela2022stress}.
+    \end{itemize}
+    \item Time-Frequency Domain Features: These capture how the frequency content of the signal changes over time:
+    \begin{itemize}
+        \item Discrete Wavelet Transform (DWT): This method decomposes the signal into different frequency sub-bands using a mother 
+        wavelet (e.g., 'db4'), providing information in both the time and frequency domains \cite{roy2023hybrid, nirabi2021machine}.
+        \item Short-Time Fourier Transform (STFT): This calculates the frequency spectrum over short, overlapping time windows 
+        \cite{alshorman2022frontal, martinez2021detection}.
+    \end{itemize}
+    \item Complexity and Non-linear Features: These quantitative measures gauge the irregularity and unpredictability inherent in the signal:
+    \begin{itemize}
+        \item Approximate Entropy (ApEn): A measure used to quantify the signal's regularity \cite{chakladar2020eeg}.
+        \item Shannon Entropy (SE): This feature quantifies the uncertainty or randomness present in the signal \cite{EEG-based mental 
+        workload estimation using deep BLSTM-LSTM network and evolutionary algorithm}.
+    \end{itemize}
+\end{enumerate}
 
-Reconstruction (ASR) is another technique that identifies and statistically interpolates high-variance signal components that exceed a 
-certain threshold (Li et al., 2023).
-
-Re-referencing: The recorded EEG potentials are relative. To standardize the signals and reduce common noise across channels, the data is 
-often re-referenced. The Common Average Reference (CAR) method, which subtracts the average value of all electrodes from each individual 
-electrode, is a widely recommended approach (Li et al., 2023)
-
-\subsection{Feature Extraction Methodologies}\label{ITH}
-Once the EEG signals are preprocessed, the next step is to derive inputs suitable for a machine learning model. This is governed by one 
-of two primary philosophies for feature handling, which are increasingly combined in hybrid approaches.
-
-The traditional philosophy involves manually calculating a set of features from the signal, often based on domain knowledge. These 
-"hand-crafted" features are designed to capture specific characteristics of the EEG signal across different domains.
-
-Frequency-Domain Features: These describe the power distribution across different frequency bands
-\begin{itemize}
-\item Power Spectral Density (PSD): The average power of the signal in a specific frequency band (e.g., Alpha, Beta) (Islam et al., 2021).
-\item Differential Entropy (DE): A feature related to the complexity of the signal within a frequency band, often used in emotion 
-recognition (Li et al., 2023)
-\end{itemize}
-Time-Frequency Domain Features: These capture how the frequency content of the signal changes over time
-\begin{itemize}
-\item Discrete Wavelet Transform (DWT): Decomposes the signal into different frequency sub-bands using a mother wavelet (e.g., 'db4'), 
-providing both time and frequency information (Nirabi et al., 2021)
-\item oShort-Time Fourier Transform (STFT): Calculates the frequency spectrum over short, overlapping time windows (Li et al., 2023).
-\end{itemize}
-
-Complexity and Non-linear Features: These measure the irregularity and unpredictability of the signal.
-
-\begin{itemize}
-\item Approximate Entropy (ApEn): A measure of the signal's regularity (Das Chakladar et al., 2020).
-\item Shannon Entropy (SE): Quantifies the uncertainty or randomness in the signal (Islam et al., 2021).
-\end{itemize}
-The alternative, more modern philosophy is characteristic of many deep learning frameworks. In end-to-end learning, the raw or minimally
-processed EEG signals are fed directly into a deep neural network (e.g., a CNN or RNN). The network itself is then tasked with learning
-the most relevant and discriminative features automatically through its hierarchical layers (Li et al., 2023). This approach eliminates
-the need for manual feature engineering, potentially allowing the model to discover novel patterns that are not captured by predefined
-feature sets (Sundaresan et al., 2021). It is important to note that these two philosophies are not mutually exclusive; hybrid approaches
-are common, where sophisticated deep learning architectures are trained on sets of highly engineered features to leverage both domain
-knowledge and the model's capacity for learning complex relationships.
-
+The alternative, more modern philosophy is characteristic of deep learning (DL) frameworks 
+\cite{Deep Learning Approaches for Stress Detection: A Survey, A Review on Mental Stress Detection Using Wearable Sensors and Machine Learning Techniques}. In 
+end-to-end learning, the raw or minimally processed EEG signals are fed directly into a deep neural network (e.g., a CNN or RNN) 
+\cite{A review on evaluating mental stress by deep learning using EEG signals, StressNet: Hybrid model of LSTM and CNN for stress detection from 
+electroencephalogram signal (EEG)}. The network itself is thereby tasked with autonomously learning the most relevant and discriminative features 
+automatically through its hierarchical layers \cite{A review on evaluating mental stress by deep learning using EEG signals, Deep Learning Approaches 
+for Stress Detection: A Survey}. This approach crucially bypasses the need for manual feature engineering, offering the potential for the model to 
+discover novel patterns not easily captured by predefined feature sets \cite{Evaluating deep learning EEG-based mental stress classification in 
+adolescents with autism for breathing entrainment BCI}. It is important to note that these two philosophies are not mutually exclusive; hybrid approaches 
+are common, where sophisticated deep learning architectures (e.g., combining CNN and LSTM) are trained on sets of highly engineered features to strategically 
+combine domain knowledge with the model's capacity for learning complex relationships \cite{StressNet: Hybrid model of LSTM and CNN for 
+stress detection from electroencephalogram signal (EEG), EEG-based mental workload estimation using deep BLSTM-LSTM network and evolutionary 
+algorithm, Hybrid Deep Learning Approach for Stress Detection Using Decomposed EEG Signals}.
 \section{Review method}
 This review followed the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA 2020) guidelines for planning and reporting 
 the literature search and study selection process. A PRISMA flow diagram was used to document the number of records identified, screened, assessed 

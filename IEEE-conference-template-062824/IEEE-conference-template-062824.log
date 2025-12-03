@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.6)  27 NOV 2025 14:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.6)  27 NOV 2025 20:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -270,17 +270,109 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+))
+
+LaTeX Warning: Citation `yaribeygi2017impact' on page 1 undefined on input line 61.
+
+
+LaTeX Warning: Citation `mariotti2015effects' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `kyrou2024deep' on page 1 undefined on input line 67.
+
+
+LaTeX Warning: Citation `vanitha2013hybrid' on page 1 undefined on input line 67.
+
+
+LaTeX Warning: Citation `herborn2015skin' on page 1 undefined on input line 67.
+
+
+LaTeX Warning: Citation `kyrou2024deep' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `kyrou2024deep' on page 1 undefined on input line 87.
+
+
+LaTeX Warning: Citation `hafeez2024eeg' on page 1 undefined on input line 91.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ]
+
+LaTeX Warning: Citation `li2020deep' on page 2 undefined on input line 106.
+
+
+LaTeX Warning: Citation `li2020deep' on page 2 undefined on input line 107.
+
+
+LaTeX Warning: Citation `merlin2022deep' on page 2 undefined on input line 107.
+
+
+LaTeX Warning: Citation `gao2021complex' on page 2 undefined on input line 109.
+
+
+LaTeX Warning: Citation `roy2023hybrid' on page 2 undefined on input line 109.
+
+
+LaTeX Warning: Citation `tjepkema2018deep' on page 2 undefined on input line 110.
+
+
+LaTeX Warning: Citation `birjandtalab2017automated' on page 2 undefined on input line 110.
+
+
+LaTeX Warning: Citation `asif2019human' on page 2 undefined on input line 111.
+
+
 Underfull \hbox (badness 2556) in paragraph at lines 109--114
 []\OT1/ptm/m/n/10 In neu-roin-for-mat-ics, these strengths have led to the
  []
 
+
+LaTeX Warning: Citation `james2020deep' on page 2 undefined on input line 116.
+
+
+LaTeX Warning: Citation `roy2023hybrid' on page 2 undefined on input line 117.
+
+
+LaTeX Warning: Citation `james2020deep' on page 2 undefined on input line 119.
+
+
+LaTeX Warning: Citation `roy2023hybrid' on page 2 undefined on input line 121.
+
+
+LaTeX Warning: Citation `herborn2015skin' on page 2 undefined on input line 122.
+
+
+LaTeX Warning: Citation `merlin2022deep' on page 2 undefined on input line 125.
+
+
+LaTeX Warning: Citation `roy2023hybrid' on page 2 undefined on input line 125.
+
+
+LaTeX Warning: Citation `roy2023hybrid' on page 2 undefined on input line 128.
+
+
+LaTeX Warning: Citation `merlin2022deep' on page 2 undefined on input line 129.
+
+
+LaTeX Warning: Citation `chung2014empirical' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `chung2014empirical' on page 2 undefined on input line 138.
+
+
+LaTeX Warning: Citation `aguilera2025explosive' on page 2 undefined on input line 141.
+
+
+LaTeX Warning: Citation `aguilera2025explosive' on page 2 undefined on input line 143.
+
 [2]
+
+LaTeX Warning: Citation `he2025hyperbolic' on page 3 undefined on input line 145.
+
 LaTeX Font Info:    Trying to load font information for U+msa on input line 152.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 152.
@@ -302,123 +394,199 @@ Underfull \hbox (badness 2088) in paragraph at lines 166--171
 
 Underfull \vbox (badness 1412) has occurred while \output is active []
 
- [3] [4]
-Underfull \hbox (badness 4391) in paragraph at lines 308--309
+ [3]
+
+LaTeX Warning: Citation `kyrou2024deep' on page 4 undefined on input line 230.
+
+
+LaTeX Warning: Citation `gedam2021review' on page 4 undefined on input line 230.
+
+
+LaTeX Warning: Citation `katmah2021review' on page 4 undefined on input line 234.
+
+
+LaTeX Warning: Citation `gedam2021review' on page 4 undefined on input line 234.
+
+
+LaTeX Warning: Citation `alshorman2022frontal' on page 4 undefined on input line 240.
+
+
+LaTeX Warning: Citation `martinez2021detection' on page 4 undefined on input line 240.
+
+
+LaTeX Warning: Citation `gedam2021review' on page 4 undefined on input line 240.
+
+
+LaTeX Warning: Citation `patel2023mental' on page 4 undefined on input line 242.
+
+
+LaTeX Warning: Citation `phutela2022stress' on page 4 undefined on input line 242.
+
+
+LaTeX Warning: Citation `roy2023hybrid' on page 4 undefined on input line 247.
+
+
+LaTeX Warning: Citation `nirabi2021machine' on page 4 undefined on input line 247.
+
+
+LaTeX Warning: Citation `alshorman2022frontal' on page 4 undefined on input line 249.
+
+
+LaTeX Warning: Citation `martinez2021detection' on page 4 undefined on input line 249.
+
+
+LaTeX Warning: Citation `chakladar2020eeg' on page 4 undefined on input line 253.
+
+
+LaTeX Warning: Citation `EEG-based mental workload estimation using deep BLSTM-LSTM network and evolutionary algorithm' on page 4 undefined on input line 255.
+
+
+LaTeX Warning: Citation `Deep Learning Approaches for Stress Detection: A Survey' on page 4 undefined on input line 260.
+
+
+LaTeX Warning: Citation `A Review on Mental Stress Detection Using Wearable Sensors and Machine Learning Techniques' on page 4 undefined on input line 260.
+
+
+LaTeX Warning: Citation `A review on evaluating mental stress by deep learning using EEG signals' on page 4 undefined on input line 263.
+
+
+LaTeX Warning: Citation `StressNet: Hybrid model of LSTM and CNN for stress detection from electroencephalogram signal (EEG)' on page 4 undefined on input line 263.
+
+
+LaTeX Warning: Citation `A review on evaluating mental stress by deep learning using EEG signals' on page 4 undefined on input line 265.
+
+
+LaTeX Warning: Citation `Deep Learning Approaches for Stress Detection: A Survey' on page 4 undefined on input line 265.
+
+
+LaTeX Warning: Citation `Evaluating deep learning EEG-based mental stress classification in adolescents with autism for breathing entrainment BCI' on page 4 undefined on input line 267.
+
+
+LaTeX Warning: Citation `StressNet: Hybrid model of LSTM and CNN for stress detection from electroencephalogram signal (EEG)' on page 4 undefined on input line 271.
+
+
+LaTeX Warning: Citation `EEG-based mental workload estimation using deep BLSTM-LSTM network and evolutionary algorithm' on page 4 undefined on input line 271.
+
+
+LaTeX Warning: Citation `Hybrid Deep Learning Approach for Stress Detection Using Decomposed EEG Signals' on page 4 undefined on input line 271.
+
+[4]
+Underfull \hbox (badness 4391) in paragraph at lines 300--301
 []\OT1/ptm/m/n/10 Non[]EEG modal-i-ties only (e.g., ECG[], GSR[], or
  []
 
 [5]
-Underfull \hbox (badness 1939) in paragraph at lines 401--402
+Underfull \hbox (badness 1939) in paragraph at lines 393--394
 \OT1/ptm/m/n/8 ven-tional SVM on DWT
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--406
+Underfull \hbox (badness 10000) in paragraph at lines 398--398
 []\OT1/ptm/m/n/8 Sundaresan et al.,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--410
+Underfull \hbox (badness 10000) in paragraph at lines 402--402
 []\OT1/ptm/m/n/8 93.27% (4-class:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--410
+Underfull \hbox (badness 10000) in paragraph at lines 402--402
 \OT1/ptm/m/n/8 Stres-sor, Base-line,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--410
+Underfull \hbox (badness 10000) in paragraph at lines 402--402
 \OT1/ptm/m/n/8 Guided/Unguided
  []
 
 
-Underfull \hbox (badness 5302) in paragraph at lines 411--412
+Underfull \hbox (badness 5302) in paragraph at lines 403--404
 []\OT1/ptm/m/n/8 Demonstrated high ac-cu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--417
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
 []\OT1/ptm/m/n/8 87.62% (4-class
  []
 
 
-Underfull \hbox (badness 6876) in paragraph at lines 418--419
+Underfull \hbox (badness 6876) in paragraph at lines 410--411
 []\OT1/ptm/m/n/8 Novel ad-ver-sar-ial frame-
  []
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 418--419
+Underfull \hbox (badness 1997) in paragraph at lines 410--411
 \OT1/ptm/m/n/8 work for subject-invariant
  []
 
 
-Underfull \hbox (badness 3260) in paragraph at lines 421--421
+Underfull \hbox (badness 3260) in paragraph at lines 413--413
 []\OT1/ptm/m/n/8 GRU with Adam op-ti-
  []
 
 
-Underfull \hbox (badness 2158) in paragraph at lines 424--424
+Underfull \hbox (badness 2158) in paragraph at lines 416--416
 []\OT1/ptm/m/n/8 89% (Test ac-cu-racy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--431
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
 []\OT1/ptm/m/n/8 86.33% (No
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--431
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
 \OT1/ptm/m/n/8 task), 82.57%
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--438
+Underfull \hbox (badness 10000) in paragraph at lines 430--430
 []\OT1/ptm/m/n/8 MSHCL (Multi-Scale
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--438
+Underfull \hbox (badness 10000) in paragraph at lines 430--430
 \OT1/ptm/m/n/8 Hy-per-bolic Con-trastive
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--439
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
 []\OT1/ptm/m/n/8 SEED, MPED,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--441
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
 []\OT1/ptm/m/n/8 89.3% (3-class on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 438--438
 []\OT1/ptm/m/n/8 Textual En-tail-ment,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 438--438
 \OT1/ptm/m/n/8 Noisy-Prefix
  []
 
 
-Underfull \hbox (badness 2573) in paragraph at lines 448--448
+Underfull \hbox (badness 2573) in paragraph at lines 440--440
 []\OT1/ptm/m/n/8 97.14% vs. 95.96%
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 []\OT1/ptm/m/n/8 Foundational work
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 \OT1/ptm/m/n/8 in-tro-duc-ing hy-per-bolic
  []
 
 
-Overfull \hbox (65.30411pt too wide) in paragraph at lines 389--453
+Overfull \hbox (65.30411pt too wide) in paragraph at lines 381--445
  [][] 
  []
 
@@ -439,17 +607,24 @@ Before submitting the final camera ready copy, remember to:
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 4226 strings out of 476106
- 66313 string characters out of 5793933
- 1950975 words of memory out of 5000000
- 26191 multiletter control sequences out of 15000+600000
+ 4242 strings out of 476106
+ 67099 string characters out of 5793933
+ 1951975 words of memory out of 5000000
+ 26207 multiletter control sequences out of 15000+600000
  598489 words of font info for 114 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  57i,10n,65p,892b,275s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on IEEE-conference-template-062824.pdf (7 pages, 175120 bytes).
+Output written on IEEE-conference-template-062824.pdf (7 pages, 176663 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream

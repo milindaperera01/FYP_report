@@ -1,6 +1,30 @@
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: IEEE-conference-template-062824.aux
+White space in argument---line 45 of file IEEE-conference-template-062824.aux
+ : \citation{EEG-based
+ :                     mental workload estimation using deep BLSTM-LSTM network and evolutionary algorithm}
+I'm skipping whatever remains of this command
+White space in argument---line 46 of file IEEE-conference-template-062824.aux
+ : \citation{Deep
+ :                Learning Approaches for Stress Detection: A Survey,A Review on Mental Stress Detection Using Wearable Sensors and Machine Learning Techniques}
+I'm skipping whatever remains of this command
+White space in argument---line 47 of file IEEE-conference-template-062824.aux
+ : \citation{A
+ :             review on evaluating mental stress by deep learning using EEG signals,StressNet: Hybrid model of LSTM and CNN for stress detection from electroencephalogram signal (EEG)}
+I'm skipping whatever remains of this command
+White space in argument---line 48 of file IEEE-conference-template-062824.aux
+ : \citation{A
+ :             review on evaluating mental stress by deep learning using EEG signals,Deep Learning Approaches for Stress Detection: A Survey}
+I'm skipping whatever remains of this command
+White space in argument---line 49 of file IEEE-conference-template-062824.aux
+ : \citation{Evaluating
+ :                      deep learning EEG-based mental stress classification in adolescents with autism for breathing entrainment BCI}
+I'm skipping whatever remains of this command
+White space in argument---line 50 of file IEEE-conference-template-062824.aux
+ : \citation{StressNet:
+ :                      Hybrid model of LSTM and CNN for stress detection from electroencephalogram signal (EEG),EEG-based mental workload estimation using deep BLSTM-LSTM network and evolutionary algorithm,Hybrid Deep Learning Approach for Stress Detection Using Decomposed EEG Signals}
+I'm skipping whatever remains of this command
 The style file: IEEEtran.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -8,49 +32,54 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: references.bib
+Repeated entry---line 171 of file references.bib
+ : @article{kyrou2024deep
+ :                       ,
+I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 17 entries,
+You've used 25 entries,
             4087 wiz_defined-function locations,
-            934 strings with 10878 characters,
-and the built_in function-call counts, 14145 in all, are:
-= -- 1168
-> -- 361
-< -- 121
-+ -- 200
-- -- 71
-* -- 686
-:= -- 2067
-add.period$ -- 36
-call.type$ -- 17
-change.case$ -- 16
-chr.to.int$ -- 258
-cite$ -- 17
-duplicate$ -- 1015
-empty$ -- 1066
-format.name$ -- 80
-if$ -- 3307
+            976 strings with 12764 characters,
+and the built_in function-call counts, 20540 in all, are:
+= -- 1711
+> -- 535
+< -- 161
++ -- 292
+- -- 113
+* -- 993
+:= -- 3013
+add.period$ -- 54
+call.type$ -- 25
+change.case$ -- 24
+chr.to.int$ -- 324
+cite$ -- 25
+duplicate$ -- 1507
+empty$ -- 1555
+format.name$ -- 124
+if$ -- 4815
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 176
-newline$ -- 74
-num.names$ -- 17
-pop$ -- 394
+int.to.str$ -- 25
+missing$ -- 266
+newline$ -- 98
+num.names$ -- 25
+pop$ -- 597
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1106
+skip$ -- 1616
 stack$ -- 0
-substring$ -- 678
-swap$ -- 865
-text.length$ -- 35
+substring$ -- 902
+swap$ -- 1267
+text.length$ -- 53
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 17
+type$ -- 25
 warning$ -- 0
-while$ -- 62
-width$ -- 19
-write$ -- 191
+while$ -- 87
+width$ -- 27
+write$ -- 273
+(There were 7 error messages)

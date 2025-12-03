@@ -71,4 +71,28 @@ M.~Aguilera, P.~A. Morales, F.~E. Rosas, and H.~Shimazaki, ``Explosive neural ne
 \bibitem{he2025hyperbolic}
 N.~He, H.~Madhu, N.~Bui, M.~Yang, and R.~Ying, ``Hyperbolic deep learning for foundation models: A survey,'' in \emph{Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2}, 2025, pp. 6021--6031.
 
+\bibitem{gedam2021review}
+S.~Gedam and S.~Paul, ``A review on mental stress detection using wearable sensors and machine learning techniques,'' \emph{IEEE Access}, vol.~9, pp. 84\,045--84\,066, 2021.
+
+\bibitem{katmah2021review}
+R.~Katmah, F.~Al-Shargie, U.~Tariq, F.~Babiloni, F.~Al-Mughairbi, and H.~Al-Nashash, ``A review on mental stress assessment methods using eeg signals,'' \emph{Sensors}, vol.~21, no.~15, p. 5043, 2021.
+
+\bibitem{alshorman2022frontal}
+O.~AlShorman, M.~Masadeh, M.~B.~B. Heyat, F.~Akhtar, H.~Almahasneh, G.~M. Ashraf, and A.~Alexiou, ``Frontal lobe real-time eeg analysis using machine learning techniques for mental stress detection,'' \emph{Journal of integrative neuroscience}, vol.~21, no.~1, p.~20, 2022.
+
+\bibitem{martinez2021detection}
+A.~Mart{\'\i}nez-Rodrigo, B.~Garc{\'\i}a-Mart{\'\i}nez, {\'A}.~Huerta, and R.~Alcaraz, ``Detection of negative stress through spectral features of electroencephalographic recordings and a convolutional neural network,'' \emph{Sensors}, vol.~21, no.~9, p. 3050, 2021.
+
+\bibitem{patel2023mental}
+A.~Patel, D.~Nariani, and A.~Rai, ``Mental stress detection using eeg and recurrent deep learning,'' in \emph{2023 IEEE Applied Sensing Conference (APSCON)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2023, pp. 1--3.
+
+\bibitem{phutela2022stress}
+N.~Phutela, D.~Relan, G.~Gabrani, P.~Kumaraguru, and M.~Samuel, ``Stress classification using brain signals based on lstm network,'' \emph{Computational Intelligence and Neuroscience}, vol. 2022, no.~1, p. 7607592, 2022.
+
+\bibitem{nirabi2021machine}
+A.~Nirabi, F.~Abd~Rahman, M.~H. Habaebi, K.~A. Sidek, and S.~Yusoff, ``Machine learning-based stress level detection from eeg signals,'' in \emph{2021 IEEE 7th International Conference on Smart Instrumentation, Measurement and Applications (ICSIMA)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2021, pp. 53--58.
+
+\bibitem{chakladar2020eeg}
+D.~D. Chakladar, S.~Dey, P.~P. Roy, and D.~P. Dogra, ``Eeg-based mental workload estimation using deep blstm-lstm network and evolutionary algorithm,'' \emph{Biomedical Signal Processing and Control}, vol.~60, p. 101989, 2020.
+
 \end{thebibliography}
